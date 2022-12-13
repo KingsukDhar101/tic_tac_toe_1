@@ -1,38 +1,104 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.container{
+  margin-top: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player_section {
+  height: 50px;
+  width: 100px;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 10px;
+}
+.winning_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.no_move {
+  border: 3px solid red;
+  pointer-events: none;
+}
+.board {
+  width: 60%;
+  max-width: 400px;
+  height: 400px;
+  background-color: #82C445;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid black; */
+}
+.square {
+  flex: 33%;
+  height: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.square:active {
+  background-color: #29910ca0;
+}
+.pos_highlight {
+  font-size: 8px;
+  position: absolute;
+  top: 3px;
+  right: 5px;
+}
+.restart_btn {
   color: white;
+  padding: 8px 10px;
+  margin: 10px 0;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  background-color: #4b575e;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 560px) {
+  .board {
+    height: 350px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 500px) {
+  .board {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .board {
+    height: 260px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .board {
+    height: 230px;
   }
 }
